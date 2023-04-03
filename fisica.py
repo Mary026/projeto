@@ -6,3 +6,5 @@ for linha_arquivo_Y in leitura_do_arquivo_Y:
     separacao_Y = float(linha_arquivo_Y[:-2])
     lista_Y.append(separacao_Y)
 print(lista_Y)
+
+lista_X = []
