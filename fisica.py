@@ -1,3 +1,7 @@
+x = float(input("Digite a posição do robô em X: "))
+y = float(input("Digite a posição do robô em Y: "))
+
+
 lista_Y = []
 arquivo_Y = open("PosicaoBolaEmY.txt", "r")
 leitura_do_arquivo_Y = arquivo_Y.readlines()
