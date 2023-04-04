@@ -19,3 +19,12 @@ for linha_arquivo_X in leitura_do_arquivo_X:
     separacao_X = float(linha_arquivo_X[:-2])
     lista_X.append(separacao_X)
 print(lista_X)
+
+lista_T = []
+arquivo_T = open("TempoBola.txt", "r")
+leitura_do_arquivo_T = arquivo_T.readlines()
+for linha_arquivo_T in leitura_do_arquivo_T:
+    arquivo_T.close()
+    separacao_T = float(linha_arquivo_T[:-2])
+    lista_T.append(separacao_T)
+print(lista_T)
