@@ -1,6 +1,11 @@
 #Inputs para a posição do robô em X e Y
-x = float(input("Digite a posição do robô em X: "))
-y = float(input("Digite a posição do robô em Y: "))
+robo_x = float(input("Digite a posição do robô em X: "))
+robo_y = float(input("Digite a posição do robô em Y: "))
+
+#Valores que utilizaremos para o robô
+robo_velocidade = 2.78
+robo_aceleracao = 2.78
+robo_peso = 2.78
 
 #Armazenar os dados da bola na Posição Y do plano cartesiano em uma lista
 lista_Y = []
@@ -34,3 +39,5 @@ print(lista_T)
 
 #Analisando qual posição da bola estará mais perto do robô
 for posicao_mais_perto in lista_X:
+    #if posicao_mais_perto robo_x:
+        print(posicao_mais_perto)
