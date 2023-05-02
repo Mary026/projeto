@@ -55,5 +55,3 @@ print(posicao_y)
 distancia_robo_e_bola = ()
 distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
 print(distancia_robo_e_bola)
-
-#:::
