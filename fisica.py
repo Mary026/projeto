@@ -45,7 +45,9 @@ x_final_1 = 9
 #Quadrantes - 2 Quadrante
 
 #Quadrantes - 3 Quadrante
+
 #Quadrantes - 4 Quadrante
+
 #Analisando qual posição da bola estará mais perto do robô em Y
 for posicao_mais_perto_y in lista_Y:
     if posicao_mais_perto_y < robo_y:
