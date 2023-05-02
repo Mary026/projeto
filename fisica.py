@@ -41,3 +41,5 @@ print(lista_T)
 for posicao_mais_perto in lista_X:
     #if posicao_mais_perto robo_x:
         print(posicao_mais_perto)
+
+#+
