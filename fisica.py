@@ -64,12 +64,13 @@ for indice_X in range(len(lista_X)):
     print(indice_X)
     break
 
+for elemento_X in range(len(lista_X)):
+    if indice_X == elemento_X:
+        print(elemento_X)
+
 #posicao_x = 
 
 #distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
 #distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
 #print(distancia_robo_e_bola)
 
-
-
-#!!!
