@@ -60,11 +60,9 @@ for indice_Y in range(len(lista_Y)):
         break
 
 for indice_X in range(len(lista_X)):
-    if lista_X[indice_X] == indice_Y:
-        print(indice_X)
-    else:
-        print(indice_X)
-        break
+    indice_X = indice_Y
+    print(indice_X)
+    break
 
 #posicao_x = 
 
