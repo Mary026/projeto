@@ -25,7 +25,6 @@ for linha_arquivo_X in leitura_do_arquivo_X:
     arquivo_X.close()
     separacao_X = float(linha_arquivo_X[:-1])
     lista_X.append(separacao_X)
-print(lista_X)
 
 #Armazenar os dados do tempo da bola
 #lista_T = []
@@ -55,21 +54,18 @@ print(posicao_y)
 
 for indice_Y in range(len(lista_Y)):
     if lista_Y[indice_Y] == posicao_y:
-        indice_Y = indice_Y
+        indice_Y = indice_Y + 1
         print(indice_Y)
         break
 indice_X = indice_Y
 print(indice_X)
-    
-for elemento_X in range(len(lista_X)):
-    if lista_X[elemento_X] == indice_X:
-        posicao_x = indice_X
-        print(posicao_x)
-        break
-else:
-    print(0)
 
-#distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
-#distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
-#print(distancia_robo_e_bola)
+contador = 0
+for x in range(indice_X):
+    posicao_x = lista_X[x]
+print(posicao_x)
 
+distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
+distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
+distancia_robo_e_bola = round(distancia_robo_e_bola, 3)
+print(distancia_robo_e_bola)
