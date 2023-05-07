@@ -60,7 +60,6 @@ for indice_Y in range(len(lista_Y)):
 indice_X = indice_Y
 print(indice_X)
 
-contador = 0
 for x in range(indice_X):
     posicao_x = lista_X[x]
 print(posicao_x)
@@ -69,3 +68,4 @@ distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
 distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
 distancia_robo_e_bola = round(distancia_robo_e_bola, 3)
 print(distancia_robo_e_bola)
+
