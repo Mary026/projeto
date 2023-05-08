@@ -36,6 +36,42 @@ for linha_arquivo_X in leitura_do_arquivo_X:
 #    lista_T.append(separacao_T)
 #print(lista_T)
 
+#Analisando qual posição da bola estará mais perto do robô em Y
+for posicao_mais_perto_y in lista_Y:
+    if posicao_mais_perto_y < robo_y:
+        posicao_y = posicao_mais_perto_y
+print(posicao_y)
+
+# Descobrindo o indice da lista Y e lista X
+for indice_Y in range(len(lista_Y)):
+    if lista_Y[indice_Y] == posicao_y:
+        indice_Y = indice_Y + 1
+        print(indice_Y)
+        break
+indice_X = indice_Y
+print(indice_X)
+
+# Descobrindo o valor da lista X no indice
+for x in range(indice_X):
+    posicao_x = lista_X[x]
+print(posicao_x)
+
+# Descobrindo o valor da lista T no indice
+#indice_T = indice_X
+#for t in range(indice_T):
+#    tempo_bola = lista_T[t]
+#print(tempo_bola)
+
+# Cálculo da distância do robô até a bola 
+distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
+distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
+distancia_robo_e_bola = round(distancia_robo_e_bola, 3)
+print(distancia_robo_e_bola)
+
+# Tempo em que o robô vai demorar para chegar na bola
+tempo_robo_cheguei = distancia_robo_e_bola/robo_velocidade
+print(tempo_robo_cheguei)
+
 #Quadrantes - 1 Quadrante
 y_inicial_1 = 3.0
 y_final_1 = 5.3
@@ -46,26 +82,3 @@ x_final_1 = 9.0
 
 #Quadrantes - 3 Quadrante
 #Quadrantes - 4 Quadrante
-#Analisando qual posição da bola estará mais perto do robô em Y
-for posicao_mais_perto_y in lista_Y:
-    if posicao_mais_perto_y < robo_y:
-        posicao_y = posicao_mais_perto_y
-print(posicao_y)
-
-for indice_Y in range(len(lista_Y)):
-    if lista_Y[indice_Y] == posicao_y:
-        indice_Y = indice_Y + 1
-        print(indice_Y)
-        break
-indice_X = indice_Y
-print(indice_X)
-
-for x in range(indice_X):
-    posicao_x = lista_X[x]
-print(posicao_x)
-
-distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
-distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
-distancia_robo_e_bola = round(distancia_robo_e_bola, 3)
-print(distancia_robo_e_bola)
-
