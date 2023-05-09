@@ -68,17 +68,63 @@ distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
 distancia_robo_e_bola = round(distancia_robo_e_bola, 3)
 print(distancia_robo_e_bola)
 
+# Raio de Interceptação
+distancia_robo_e_bola = distancia_robo_e_bola - 0.01
+
 # Tempo em que o robô vai demorar para chegar na bola
 tempo_robo_cheguei = distancia_robo_e_bola/robo_velocidade
+tempo_robo_cheguei = round(tempo_robo_cheguei, 2)
 print(tempo_robo_cheguei)
 
-#Quadrantes - 1 Quadrante
-y_inicial_1 = 3.0
-y_final_1 = 5.3
-x_inicial_1 = 4.5
-x_final_1 = 9.0
+# Descobrindo em qual quadrante a bola está
+if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 3.0 and robo_y < 6.0):
+    print("O ROBÔ ESTÁ NO PRIMEIRO QUADRANTE")
+    if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and posicao_y < 6.0):
+        print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
+        print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
+        print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+    elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
+        print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+    else:
+        print("A BOLA NÃO ESTÁ NO CAMPO")
 
-#Quadrantes - 2 Quadrante
+if (robo_x > 0 and robo_x < 4.5) and (robo_y > 3.0 and robo_y < 6.0):
+    print("O ROBÔ ESTÁ NO SEGUNDO QUADRANTE")
+    if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
+        print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
+        print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
+        print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+    elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
+        print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+    else:
+        print("A BOLA NÃO ESTÁ NO CAMPO")
 
-#Quadrantes - 3 Quadrante
-#Quadrantes - 4 Quadrante
+if (robo_x > 0 and robo_x < 4.5) and (robo_y > 0 and robo_y < 3.0):
+    print("O ROBÔ ESTÁ NO TERCEIRO QUADRANTE")
+    if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
+        print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
+        print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
+        print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+    elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
+        print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+    else:
+        print("A BOLA NÃO ESTÁ NO CAMPO")
+
+if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 0 and robo_y < 3.5):
+    print("O ROBÔ ESTÁ NO QUARTO QUADRANTE")
+    if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
+        print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
+        print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+    elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
+        print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+    elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
+        print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+    else:
+        print("A BOLA NÃO ESTÁ NO CAMPO")
