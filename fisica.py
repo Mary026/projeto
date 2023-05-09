@@ -81,12 +81,16 @@ if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 3.0 and robo_y < 6.0):
     print("O ROBÔ ESTÁ NO PRIMEIRO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and posicao_y < 6.0):
         print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
         print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
         print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
         print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
@@ -94,12 +98,16 @@ if (robo_x > 0 and robo_x < 4.5) and (robo_y > 3.0 and robo_y < 6.0):
     print("O ROBÔ ESTÁ NO SEGUNDO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
         print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
         print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
         print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
         print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
@@ -107,12 +115,16 @@ if (robo_x > 0 and robo_x < 4.5) and (robo_y > 0 and robo_y < 3.0):
     print("O ROBÔ ESTÁ NO TERCEIRO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
         print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
         print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
         print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
         print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
@@ -120,11 +132,15 @@ if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 0 and robo_y < 3.5):
     print("O ROBÔ ESTÁ NO QUARTO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
         print("A BOLA ESTÁ NO PRIMEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0):
         print("A BOLA ESTÁ NO SEGUNDO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0):
         print("A BOLA ESTÁ NO TERCEIRO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA ESQUERDA")
     elif (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5):
         print("A BOLA ESTÁ NO QUARTO QUADRANTE")
+        print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
