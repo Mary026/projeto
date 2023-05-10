@@ -7,6 +7,7 @@ robo_y = float(input("Digite a posição do robô em Y: "))
 robo_velocidade = 2.78
 robo_aceleracao = 2.78
 robo_peso = 2.78
+robo_massa = 0.278
 
 #Armazenar os dados da bola na Posição Y do plano cartesiano em uma lista
 lista_Y = []
@@ -76,7 +77,12 @@ tempo_robo_cheguei = distancia_robo_e_bola/robo_velocidade
 tempo_robo_cheguei = round(tempo_robo_cheguei, 2)
 print(tempo_robo_cheguei)
 
-# Descobrindo em qual quadrante a bola está
+# Conversão de segundo para milissegundo
+# tempo_robo_cheguei = tempo_robo_cheguei * 1000
+# print(tempo_robo_cheguei)
+
+# Descobrindo em qual quadrante o robô e a bola estão
+# Robô no primeiro quadrante
 if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 3.0 and robo_y < 6.0):
     print("O ROBÔ ESTÁ NO PRIMEIRO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and posicao_y < 6.0):
@@ -94,6 +100,7 @@ if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 3.0 and robo_y < 6.0):
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
+# Robô no segundo quadrante
 if (robo_x > 0 and robo_x < 4.5) and (robo_y > 3.0 and robo_y < 6.0):
     print("O ROBÔ ESTÁ NO SEGUNDO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
@@ -111,6 +118,7 @@ if (robo_x > 0 and robo_x < 4.5) and (robo_y > 3.0 and robo_y < 6.0):
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
+# Robô no terceiro quadrante
 if (robo_x > 0 and robo_x < 4.5) and (robo_y > 0 and robo_y < 3.0):
     print("O ROBÔ ESTÁ NO TERCEIRO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
@@ -128,6 +136,7 @@ if (robo_x > 0 and robo_x < 4.5) and (robo_y > 0 and robo_y < 3.0):
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
+# Robô no quarto quadrante
 if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 0 and robo_y < 3.5):
     print("O ROBÔ ESTÁ NO QUARTO QUADRANTE")
     if (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0):
@@ -144,3 +153,13 @@ if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 0 and robo_y < 3.5):
         print("ESTÁ MAIS PERTO DO GOL DA DIREITA")
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
+
+# Cálculo para chegar no gol
+
+
+
+# Força que ele vai ter que fazer
+forca = robo_massa * robo_aceleracao
+print(forca)
+
+# Trabalho realizado
