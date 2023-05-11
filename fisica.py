@@ -64,7 +64,7 @@ print(posicao_x)
 #print(tempo_bola)
 
 # Cálculo da distância do robô até a bola 
-distancia_robo_e_bola = (((robo_x - posicao_x)**2) + ((robo_y - posicao_y)**2))
+distancia_robo_e_bola = (((posicao_x - robo_x)**2) + ((posicao_y - robo_y)**2))
 distancia_robo_e_bola = sqrt(distancia_robo_e_bola)
 distancia_robo_e_bola = round(distancia_robo_e_bola, 3)
 print(distancia_robo_e_bola)
@@ -154,12 +154,23 @@ if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 0 and robo_y < 3.5):
     else:
         print("A BOLA NÃO ESTÁ NO CAMPO")
 
-# Cálculo para chegar no gol
+# Cálculo para chegar no gol (GOL DA ESQUERDA)
+if ((posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0) or (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0)):
+    distancia_ate_o_gol = (((0.5 - posicao_x)**2) + ((3 - posicao_y)**2))
+    distancia_ate_o_gol = sqrt(distancia_robo_e_bola)
+    distancia_ate_o_gol = round(distancia_robo_e_bola, 3)
+    print(distancia_ate_o_gol)
 
-
+# Cálculo para chegar no gol (GOL DA DIREITA)
+if ((posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5) or (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0)):
+    distancia_ate_o_gol = (((8.5 - posicao_x)**2) + ((3 - posicao_y)**2))
+    distancia_ate_o_gol = sqrt(distancia_ate_o_gol)
+    distancia_ate_o_gol = round(distancia_ate_o_gol, 3)
+    print(distancia_ate_o_gol)
 
 # Força que ele vai ter que fazer
 forca = robo_massa * robo_aceleracao
 print(forca)
 
 # Trabalho realizado
+#trabalho_realizado = forca * distancia_ate_o_gol
