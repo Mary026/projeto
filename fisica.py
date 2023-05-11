@@ -170,7 +170,10 @@ if ((posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.5
 
 # Força que ele vai ter que fazer
 forca = robo_massa * robo_aceleracao
+forca = round(forca, 3)
 print(forca)
 
 # Trabalho realizado
-#trabalho_realizado = forca * distancia_ate_o_gol
+trabalho_realizado = forca * distancia_ate_o_gol
+trabalho_realizado = round(trabalho_realizado, 3)
+print(trabalho_realizado)
