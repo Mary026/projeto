@@ -178,3 +178,5 @@ print("A força que o robô vai realizar sobre a bola: %.3f\n" % forca)
 trabalho_realizado = forca * distancia_ate_o_gol
 trabalho_realizado = round(trabalho_realizado, 3)
 print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
+
+#Teste
