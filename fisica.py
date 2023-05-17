@@ -179,4 +179,9 @@ trabalho_realizado = forca * distancia_ate_o_gol
 trabalho_realizado = round(trabalho_realizado, 3)
 print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
-#Teste
+# Criar gráficos dessa parte para baixo
+# Gráfico 1
+# Gráfico 2
+# Gráfico 3
+# Gráfico 4
+# Gráfico 5
