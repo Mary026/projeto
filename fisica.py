@@ -174,8 +174,18 @@ forca = robo_massa * robo_aceleracao
 forca = round(forca, 3)
 print("A força que o robô vai realizar sobre a bola: %.3f\n" % forca)
 
+# Força de atrito cinetico
+forca_atrito_cinetico = 0.5 * robo_peso
+forca_atrito_cinetico = round(forca_atrito_cinetico, 3)
+print("A força de atrito cinético que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_cinetico)
+
+# Força de atrito estatico
+forca_atrito_estatico = 0.7 * robo_peso
+forca_atrito_estatico = round(forca_atrito_estatico, 3)
+print("A força de atrito estático que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_estatico)
+
 # Trabalho realizado
-trabalho_realizado = forca * distancia_ate_o_gol
+trabalho_realizado = (forca + forca_atrito_cinetico - forca_atrito_estatico) * distancia_ate_o_gol
 trabalho_realizado = round(trabalho_realizado, 3)
 print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
