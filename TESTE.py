@@ -1,6 +1,7 @@
 from math import *
 from tkinter import *
-#from matplotlib.pyplot import *
+import matplotlib.pyplot as plt
+
 
 def calcular():
     #Inputs para a posição do robô em X e Y
@@ -39,7 +40,6 @@ def calcular():
         arquivo_T.close()
         separacao_T = float(linha_arquivo_T[:-1])
         lista_T.append(separacao_T)
-    print(lista_T)
 
     #Analisando qual posição da bola estará mais perto do robô em Y
     for posicao_mais_perto_y in lista_Y:
@@ -85,6 +85,7 @@ def calcular():
     # Conversão de segundo para milissegundo
     tempo_robo_cheguei = tempo_robo_cheguei * 1000
     print(tempo_robo_cheguei)
+    print(" ")
 
     # Descobrindo em qual quadrante o robô e a bola estão
     # Robô no primeiro quadrante
@@ -162,8 +163,8 @@ def calcular():
     # Cálculo para chegar no gol (GOL DA ESQUERDA)
     if ((posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0) or (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0)):
         distancia_ate_o_gol = (((0.5 - posicao_x)**2) + ((3 - posicao_y)**2))
-        distancia_ate_o_gol = sqrt(distancia_robo_e_bola)
-        distancia_ate_o_gol = round(distancia_robo_e_bola, 3)
+        distancia_ate_o_gol = sqrt(distancia_ate_o_gol)
+        distancia_ate_o_gol = round(distancia_ate_o_gol, 3)
         print("A distância que o robô terá que percorrer para chegar até o gol da esquerda com a bola: %.3f\n" % distancia_ate_o_gol)
 
     # Cálculo para chegar no gol (GOL DA DIREITA)
@@ -192,9 +193,18 @@ def calcular():
     trabalho_realizado = (forca + forca_atrito_cinetico - forca_atrito_estatico) * distancia_ate_o_gol
     trabalho_realizado = round(trabalho_realizado, 3)
     print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
+    
+    # Gráfico 1 (Gráfico das trajetórias da bola e do robô em um plano 𝑥𝑦, até o ponto de interceptação)
+    plt.plot([posicao_x], [posicao_y], 'ro', label="Trajetória da bola")
+    plt.plot([robo_x], [robo_y], 'ro' , label="Trajetória do robô") 
+    plt.plot([distancia_robo_e_bola], label="Distância do robô e da bola")
+    plt.xlabel('Posição X')
+    plt.ylabel('Posição Y')
+    plt.title('Trajetórias da bola e do robô')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
-    # Criar gráficos dessa parte para baixo
-    # Gráfico 1  
     # Gráfico 2
     # Gráfico 3
     # Gráfico 4
