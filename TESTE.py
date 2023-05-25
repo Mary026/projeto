@@ -228,16 +228,51 @@ def calcular():
     #xt = 1.000 + v0x_bola * tempo
 
     # Gráfico 1 (Gráfico das trajetórias da bola e do robô em um plano 𝑥𝑦, até o ponto de interceptação)
-    plt.plot([posicao_x], [posicao_y], 'ro', label="Trajetória da bola")
-    plt.plot([robo_x], [robo_y], 'ro' , label="Trajetória do robô") 
-    plt.plot([distancia_robo_e_bola], label="Distância do robô e da bola")
-    plt.xlabel('Posição X')
-    plt.ylabel('Posição Y')
-    plt.title('Trajetórias da bola e do robô')
-    plt.legend()
-    plt.grid(True)
+def plot_intersecao(robot_x_inicial, robot_y_inicial, robot_x_final, robot_y_final,
+                    ball_x_inicial, ball_y_inicial, ball_x_final, ball_y_final):
+    # Configurar o gráfico
+    fig, ax = plt.subplots()
+
+    # Traçar a rota do robô
+    ax.plot([robot_x_inicial, robot_x_final], [robot_y_inicial, robot_y_final], 'r-', label='Rota do Robô')
+
+    # Traçar a rota da bola
+    ax.plot([ball_x_inicial, ball_x_final], [ball_y_inicial, ball_y_final], 'b-', label='Rota da Bola')
+
+    # Adicionar ponto inicial e final do robô
+    ax.plot(robot_x_inicial, robot_y_inicial, 'go', label='Início do Robô')
+    ax.plot(robot_x_final, robot_y_final, 'go', color='red', label='Fim do Robô')
+
+    # Adicionar ponto inicial e final da bola
+    #ax.plot(ball_x_inicial, ball_y_inicial, 'bo', label='Início da Bola')
+    #ax.plot(ball_x_final, ball_y_final, 'bo', label='Fim da Bola')
+
+    # Definir os limites do gráfico
+    ax.set_xlim(min(robot_x_inicial, robot_x_final, ball_x_inicial, ball_x_final) - 1,
+                max(robot_x_inicial, robot_x_final, ball_x_inicial, ball_x_final) + 1)
+    ax.set_ylim(min(robot_y_inicial, robot_y_final, ball_y_inicial, ball_y_final) - 1,
+                max(robot_y_inicial, robot_y_final, ball_y_inicial, ball_y_final) + 1)
+
+    # Adicionar rótulos e legenda
+    ax.set_xlabel('Coordenada X')
+    ax.set_ylabel('Coordenada Y')
+    ax.legend()
+
+    # Mostrar o gráfico
     plt.show()
 
+    # Exemplo de uso
+    robot_x_inicial = 6.660
+    robot_y_inicial = 5.261
+    robot_x_final = 8.855
+    robot_y_final = 5.260
+    ball_x_inicial = 1.000
+    ball_y_inicial = 0.500
+    ball_x_final = 9.000
+    ball_y_final = 5.300
+
+    plot_intersecao(robot_x_inicial, robot_y_inicial, robot_x_final, robot_y_final,
+                    ball_x_inicial, ball_y_inicial, ball_x_final, ball_y_final)
     # Gráfico 2
     # Gráfico 3
     # Gráfico 4
