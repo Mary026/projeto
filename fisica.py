@@ -28,14 +28,14 @@ for linha_arquivo_X in leitura_do_arquivo_X:
     lista_X.append(separacao_X)
 
 #Armazenar os dados do tempo da bola
-#lista_T = []
-#arquivo_T = open("TempoBola.txt", "r")
-#leitura_do_arquivo_T = arquivo_T.readlines()
-#for linha_arquivo_T in leitura_do_arquivo_T:
-#    arquivo_T.close()
-#    separacao_T = float(linha_arquivo_T[:-1])
-#    lista_T.append(separacao_T)
-#print(lista_T)
+lista_T = []
+arquivo_T = open("TempoBola.txt", "r")
+leitura_do_arquivo_T = arquivo_T.readlines()
+for linha_arquivo_T in leitura_do_arquivo_T:
+    arquivo_T.close()
+    separacao_T = float(linha_arquivo_T[:-1])
+    lista_T.append(separacao_T)
+
 
 #Analisando qual posição da bola estará mais perto do robô em Y
 for posicao_mais_perto_y in lista_Y:
@@ -58,10 +58,10 @@ for x in range(indice_X):
 print("Posição da bola em X quando ela tem o valor anterior em Y: %.3f\n" % posicao_x)
 
 # Descobrindo o valor da lista T no indice
-#indice_T = indice_X
-#for t in range(indice_T):
-#    tempo_bola = lista_T[t]
-#print("Tempo da bola quando está na posição determinada mais próxima do robô: %.2f\n" % tempo_bola)
+indice_T = indice_X
+for t in range(indice_T):
+    tempo_bola = lista_T[t]
+print("Tempo da bola quando está na posição determinada mais próxima do robô: %.2f\n" % tempo_bola)
 
 # Cálculo da distância do robô até a bola 
 distancia_robo_e_bola = (((posicao_x - robo_x)**2) + ((posicao_y - robo_y)**2))
@@ -204,12 +204,14 @@ print("A distância da origem até o primeiro ponto da bola: %.3f\n" % distancia
     
 # Velocidade média inicial da bola
 v0_bola = distancia_bola_incial / 0.02
+v0_bola = round(v0_bola, 3)
 print("A distância da origem até o primeiro ponto da bola: %.3f\n" % v0_bola)
     
 # Ângulo da bola
 angulo_bola = 0.508 / 1.010
 angulo_bola = atan(angulo_bola)
-    
+angulo_bola = round(angulo_bola, 3)
+
 # Conversão de ângulos
 cosseno = cos(angulo_bola)
 seno = sin(angulo_bola)
@@ -219,9 +221,23 @@ seno = round(seno, 3)
 
 # Trajetória da bola x em função de x
 v0x_bola = v0_bola * cosseno
+v0x_bola = round(v0x_bola, 3)
 print("A velocidade de v0x: %.3f\n" % v0x_bola)
     
-    #xt = 1.000 + v0x_bola * tempo
+# Trajetória da bola y em função de y
+v0y_bola = v0_bola * cosseno
+v0y_bola = round(v0y_bola, 3)
+print("A velocidade de v0y: %.3f\n" % v0y_bola)
+
+#
+for t in range(len(lista_T)):
+    print("Valores de t: %d\n" % t)
+    xt = 1.000 + v0x_bola * t
+    yt = 0.508 + v0y_bola * t - (5 * (t ** 2))
+    xt = round(xt, 3)
+    yt = round(yt, 3)
+    print("A velocidade de v0y: %.3f\n" % xt)
+    print("A velocidade de v0y: %.3f\n" % yt)
 # Criar gráficos dessa parte para baixo
 # Gráfico 1
 # Gráfico 2
