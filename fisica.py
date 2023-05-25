@@ -189,6 +189,39 @@ trabalho_realizado = (forca + forca_atrito_cinetico - forca_atrito_estatico) * d
 trabalho_realizado = round(trabalho_realizado, 3)
 print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
+# Contas para os gráficos
+# Distância da origem até a bola interceptada
+distancia_bola = (((posicao_x)**2) + ((posicao_y)**2))
+distancia_bola = sqrt(distancia_bola)
+distancia_bola = round(distancia_bola, 3)
+print("A distância da origem até a bola: %.3f\n" % distancia_bola)
+
+# Distância incial
+distancia_bola_incial = (((1.010)**2) + ((0.508)**2))
+distancia_bola_incial = sqrt(distancia_bola_incial)
+distancia_bola_incial = round(distancia_bola_incial, 3)
+print("A distância da origem até o primeiro ponto da bola: %.3f\n" % distancia_bola_incial)
+    
+# Velocidade média inicial da bola
+v0_bola = distancia_bola_incial / 0.02
+print("A distância da origem até o primeiro ponto da bola: %.3f\n" % v0_bola)
+    
+# Ângulo da bola
+angulo_bola = 0.508 / 1.010
+angulo_bola = atan(angulo_bola)
+    
+# Conversão de ângulos
+cosseno = cos(angulo_bola)
+seno = sin(angulo_bola)
+
+cosseno = round(cosseno, 3)
+seno = round(seno, 3)
+
+# Trajetória da bola x em função de x
+v0x_bola = v0_bola * cosseno
+print("A velocidade de v0x: %.3f\n" % v0x_bola)
+    
+    #xt = 1.000 + v0x_bola * tempo
 # Criar gráficos dessa parte para baixo
 # Gráfico 1
 # Gráfico 2
