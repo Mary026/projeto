@@ -161,6 +161,20 @@ if ((posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0
     distancia_ate_o_gol = sqrt(distancia_ate_o_gol)
     distancia_ate_o_gol = round(distancia_ate_o_gol, 3)
     print("A distância que o robô terá que percorrer para chegar até o gol da esquerda com a bola: %.3f\n" % distancia_ate_o_gol)
+    # Força que ele vai ter que fazer
+    forca = robo_massa * robo_aceleracao
+    forca = round(forca, 3)
+    print("A força que o robô vai realizar sobre a bola: %.3f\n" % forca)
+
+    # Força de atrito cinetico
+    forca_atrito_cinetico = 0.5 * robo_peso
+    forca_atrito_cinetico = round(forca_atrito_cinetico, 3)
+    print("A força de atrito cinético que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_cinetico)
+
+    # Trabalho realizado
+    trabalho_realizado = (forca + forca_atrito_cinetico) * distancia_ate_o_gol
+    trabalho_realizado = round(trabalho_realizado, 3)
+    print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
 # Cálculo para chegar no gol (GOL DA DIREITA)
 if ((posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.0) or (posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 3.0 and robo_y < 6.0)):
@@ -168,21 +182,21 @@ if ((posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.0
     distancia_ate_o_gol = sqrt(distancia_ate_o_gol)
     distancia_ate_o_gol = round(distancia_ate_o_gol, 3)
     print("A distância que o robô terá que percorrer para chegar até o gol da direita com a bola: %.3f\n" % distancia_ate_o_gol)
+    # Força que ele vai ter que fazer
+    forca = robo_massa * robo_aceleracao
+    forca = round(forca, 3)
+    print("A força que o robô vai realizar sobre a bola: %.3f\n" % forca)
 
-# Força que ele vai ter que fazer
-forca = robo_massa * robo_aceleracao
-forca = round(forca, 3)
-print("A força que o robô vai realizar sobre a bola: %.3f\n" % forca)
+    # Força de atrito cinetico
+    forca_atrito_cinetico = 0.5 * robo_peso
+    forca_atrito_cinetico = round(forca_atrito_cinetico, 3)
+    print("A força de atrito cinético que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_cinetico)
 
-# Força de atrito cinetico
-forca_atrito_cinetico = 0.5 * robo_peso
-forca_atrito_cinetico = round(forca_atrito_cinetico, 3)
-print("A força de atrito cinético que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_cinetico)
+    # Trabalho realizado
+    trabalho_realizado = (forca + forca_atrito_cinetico) * distancia_ate_o_gol
+    trabalho_realizado = round(trabalho_realizado, 3)
+    print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
-# Trabalho realizado
-trabalho_realizado = (forca + forca_atrito_cinetico) * distancia_ate_o_gol
-trabalho_realizado = round(trabalho_realizado, 3)
-print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
 # Contas para os gráficos
 # Distância da origem até a bola interceptada
@@ -240,9 +254,10 @@ print("A velocidade de v0y: %.3f\n" % v0y_bola)
 # Tempo robo cheguei para o eixo x
 # Distância que ele chega na bola
 # Gráfico 3
-# 
-#
+# Tempo robo cheguei para o eixo x
+# v0 robô
 # Gráfico 4
-# 
+# Tempo robo cheguei para o eixo x
+# a0 robô
 # Gráfico 5
 # Somente a distância entre o robô e a bola
