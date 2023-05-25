@@ -158,8 +158,8 @@ if (robo_x > 4.5 and robo_x < 9.0) and (robo_y > 0 and robo_y < 3.5):
 # Cálculo para chegar no gol (GOL DA ESQUERDA)
 if ((posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 3.0 and posicao_y < 6.0) or (posicao_x > 0 and posicao_x < 4.5) and (posicao_y > 0 and posicao_y < 3.0)):
     distancia_ate_o_gol = (((0.5 - posicao_x)**2) + ((3 - posicao_y)**2))
-    distancia_ate_o_gol = sqrt(distancia_robo_e_bola)
-    distancia_ate_o_gol = round(distancia_robo_e_bola, 3)
+    distancia_ate_o_gol = sqrt(distancia_ate_o_gol)
+    distancia_ate_o_gol = round(distancia_ate_o_gol, 3)
     print("A distância que o robô terá que percorrer para chegar até o gol da esquerda com a bola: %.3f\n" % distancia_ate_o_gol)
 
 # Cálculo para chegar no gol (GOL DA DIREITA)
@@ -179,13 +179,8 @@ forca_atrito_cinetico = 0.5 * robo_peso
 forca_atrito_cinetico = round(forca_atrito_cinetico, 3)
 print("A força de atrito cinético que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_cinetico)
 
-# Força de atrito estatico
-forca_atrito_estatico = 0.7 * robo_peso
-forca_atrito_estatico = round(forca_atrito_estatico, 3)
-print("A força de atrito estático que o robô vai realizar sobre a bola: %.3f\n" % forca_atrito_estatico)
-
 # Trabalho realizado
-trabalho_realizado = (forca + forca_atrito_cinetico - forca_atrito_estatico) * distancia_ate_o_gol
+trabalho_realizado = (forca + forca_atrito_cinetico) * distancia_ate_o_gol
 trabalho_realizado = round(trabalho_realizado, 3)
 print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
@@ -230,17 +225,24 @@ v0y_bola = round(v0y_bola, 3)
 print("A velocidade de v0y: %.3f\n" % v0y_bola)
 
 # Fórmula trajetoria xy em função de t
-for t in range(len(lista_T)):
-    print("Valores de t: %d\n" % t)
-    xt = 1.000 + v0x_bola * t
-    yt = 0.508 + v0y_bola * t - (5 * (t ** 2))
-    xt = round(xt, 3)
-    yt = round(yt, 3)
-    print("A velocidade de v0y: %.3f\n" % xt)
-    print("A velocidade de v0y: %.3f\n" % yt)
+#for t in range(len(lista_T)):
+#    print("Valores de t: %d\n" % t)
+#    xt = 1.000 + v0x_bola * t
+#    yt = 0.508 + v0y_bola * t - (5 * (t ** 2))
+#    xt = round(xt, 3)
+#    yt = round(yt, 3)
+#    print("A velocidade de v0y: %.3f\n" % xt)
+#    print("A velocidade de v0y: %.3f\n" % yt)
+    
 # Criar gráficos dessa parte para baixo
 # Gráfico 1
 # Gráfico 2
+# Tempo robo cheguei para o eixo x
+# Distância que ele chega na bola
 # Gráfico 3
+# 
+#
 # Gráfico 4
+# 
 # Gráfico 5
+# Somente a distância entre o robô e a bola
