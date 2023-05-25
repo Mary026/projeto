@@ -229,7 +229,7 @@ v0y_bola = v0_bola * cosseno
 v0y_bola = round(v0y_bola, 3)
 print("A velocidade de v0y: %.3f\n" % v0y_bola)
 
-#
+# Fórmula trajetoria xy em função de t
 for t in range(len(lista_T)):
     print("Valores de t: %d\n" % t)
     xt = 1.000 + v0x_bola * t
