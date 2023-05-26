@@ -197,7 +197,6 @@ if ((posicao_x > 4.5 and posicao_x < 9.0) and (posicao_y > 0 and posicao_y < 3.0
     trabalho_realizado = round(trabalho_realizado, 3)
     print("O trabalho que o robô vai realizar: %.3f\n" % trabalho_realizado)
 
-
 # Contas para os gráficos
 # Distância da origem até a bola interceptada
 distancia_bola = (((posicao_x)**2) + ((posicao_y)**2))
@@ -206,16 +205,43 @@ distancia_bola = round(distancia_bola, 3)
 print("A distância da origem até a bola: %.3f\n" % distancia_bola)
 
 # Distância incial
-distancia_bola_incial = (((1.010)**2) + ((0.508)**2))
+distancia_bola_incial = (((1.000)**2) + ((0.500)**2))
 distancia_bola_incial = sqrt(distancia_bola_incial)
 distancia_bola_incial = round(distancia_bola_incial, 3)
 print("A distância da origem até o primeiro ponto da bola: %.3f\n" % distancia_bola_incial)
-    
+
+# Distância final
+distancia_bola_final = (((9.000)**2) + ((5.300)**2))
+distancia_bola_final = sqrt(distancia_bola_final)
+distancia_bola_final = round(distancia_bola_final, 3)
+print("A distância da origem até o primeiro ponto da bola: %.3f\n" % distancia_bola_final)
+
+# Distância inicial robô
+distancia_inicial_robo = (((robo_x)**2) + ((robo_y)**2))
+distancia_inicial_robo = sqrt(distancia_inicial_robo)
+distancia_inicial_robo = round(distancia_inicial_robo, 3)
+print("A distância da origem até o primeiro ponto da bola: %.3f\n" % distancia_inicial_robo)
+
 # Velocidade média inicial da bola
-v0_bola = distancia_bola_incial / 0.02
-v0_bola = round(v0_bola, 3)
-print("A distância da origem até o primeiro ponto da bola: %.3f\n" % v0_bola)
-    
+velocidade_inicial_bola = distancia_bola_incial/0.02
+velocidade_inicial_bola = round(velocidade_inicial_bola, 3)
+print("A velocidade incial da bola: %.3f\n" % velocidade_inicial_bola)
+
+# Velocidade média final da bola
+velocidade_final_bola = distancia_bola_final / 0.02
+velocidade_final_bola = round(velocidade_final_bola, 3)
+print("A velocidade final da bola: %.3f\n" % velocidade_final_bola)
+
+# Aceleração média inicial da bola
+aceleracao_inicial_bola = velocidade_inicial_bola/0.02
+aceleracao_inicial_bola = round(aceleracao_inicial_bola, 3)
+print("A aceleração incial da bola: %.3f\n" % aceleracao_inicial_bola)
+
+# Aceleração média final da bola
+aceleracao_final_bola = velocidade_final_bola/0.02
+aceleracao_final_bola = round(aceleracao_final_bola, 3)
+print("A aceleração incial da bola: %.3f\n" % aceleracao_final_bola)
+
 # Ângulo da bola
 angulo_bola = 0.508 / 1.010
 angulo_bola = atan(angulo_bola)
@@ -228,25 +254,9 @@ seno = sin(angulo_bola)
 cosseno = round(cosseno, 3)
 seno = round(seno, 3)
 
-# Trajetória da bola x em função de x
-v0x_bola = v0_bola * cosseno
-v0x_bola = round(v0x_bola, 3)
-print("A velocidade de v0x: %.3f\n" % v0x_bola)
-    
-# Trajetória da bola y em função de y
-v0y_bola = v0_bola * cosseno
-v0y_bola = round(v0y_bola, 3)
-print("A velocidade de v0y: %.3f\n" % v0y_bola)
 
-# Fórmula trajetoria xy em função de t
-#for t in range(len(lista_T)):
-#    print("Valores de t: %d\n" % t)
-#    xt = 1.000 + v0x_bola * t
-#    yt = 0.508 + v0y_bola * t - (5 * (t ** 2))
-#    xt = round(xt, 3)
-#    yt = round(yt, 3)
-#    print("A velocidade de v0y: %.3f\n" % xt)
-#    print("A velocidade de v0y: %.3f\n" % yt)
+
+
     
 # Criar gráficos dessa parte para baixo
 # Gráfico 1
