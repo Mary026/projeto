@@ -3,8 +3,6 @@ from tkinter import *
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
-
-
 def calcular():
   #Inputs para a posição do robô em X e Y
   robo_x = float(entry_x.get())
